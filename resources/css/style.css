@@ -1,0 +1,276 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Proza+Libre:wght@700&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  height: 100%;
+  color: var(--font-color);
+  background-color: #000319;
+}
+
+:root {
+  --spacing-1: 8px;
+  --spacing-2: 12px;
+  --spacing-3: 16px;
+  --spacing-4: 24px;
+
+  --border-radius: 12px;
+
+  /* --font-color: #323232; */
+  --font-color: #ffff;
+}
+
+.heart {
+  color: red;
+}
+
+h2 {
+  font-family: "Proza Libre", sans-serif;
+  margin: 0;
+  margin-bottom: var(--spacing-2);
+  text-align: center;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  padding: 0 var(--spacing-3);
+  /* margin: 0 auto; */
+  display: flex;
+  flex-direction: column;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  padding: var(--spacing-3) 30px;
+  /* padding: 10px; */
+  background-color: #050512; 
+  position: fixed;
+  width: 100%;
+  top: 0; /* Position the navbar at the top of the page */
+  left: 0;
+  z-index: 2;
+}
+
+.navigation-items {
+  display: flex;
+  list-style-type: none;
+  padding: 0;
+  align-items: center;
+  margin: 0;
+  /* margin-left: auto; */
+  margin-left: 60%;
+}
+
+.navigation-item {
+  margin: var(--spacing-1);
+}
+
+.navigation-item a:hover {
+  color: paleturquoise;
+}
+
+.portrait {
+  width: 300px;
+  border-radius: var(--border-radius);
+  flex-shrink: 0;
+  margin-right: auto;
+}
+
+.about-me-container {
+  display: flex;
+}
+
+.about-me-text-container {
+  margin-right: var(--spacing-3);
+}
+
+#about-me p {
+  padding-top: 30px;
+}
+
+#about-me h2 {
+  float: left;
+  padding: 0 0px 0 535px;
+}
+
+.project-title h3 {
+  display: inline;
+}
+
+.excursion {
+  display: flex;
+}
+
+.excursion figure {
+  text-align: center;
+}
+
+figure > img {
+  width: 400px;
+  height: 400px;
+}
+
+details {
+  cursor: pointer;
+}
+
+main {
+  margin: 0 auto;
+}
+
+footer {
+  margin-top: auto;
+  padding: var(--spacing-2) 0;
+  margin: 0 auto;
+}
+
+section {
+  padding: var(--spacing-3) 0;
+  padding-top: 60px;
+  width: 100%; /*before is 120 */
+}
+
+/* section h2 {
+  text-align: center;
+  background-color: purple;
+} */
+
+.icon {
+  font-size: 2em;
+  color: var(--font-color);
+  margin: 0 var(--spacing-1);
+}
+
+
+a {
+  color: var(--font-color);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+a:hover {
+  color:cyan;
+}
+
+/* vertical timeline */
+.timeline {
+  position: relative;
+  margin: 0 auto;
+  max-width: 90%;
+}
+
+/* vertical timeline */
+.timeline::after {
+  content: '';
+  position: absolute;
+  width: 6px;
+  background-color: white;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -3px;
+}
+
+/* Container around content */
+.container {
+  padding: 10px 40px;
+  position: relative;
+  background-color: transparent;
+  width: 50%;
+}
+
+/* Place container to the left */
+.left {
+  left: 0;
+}
+
+/* Place container to the right */
+.right {
+  left: 50%;
+  background-color: transparent;
+}
+
+/* Content in container */
+.content {
+  padding: 20px 30px;
+  background-color: palevioletred;
+  position: relative;
+  border-radius: 8px;
+}
+
+.right .content {
+  /* margin-left: 0; */
+  text-align: left;
+}
+
+.left .content {
+  text-align: right;
+}
+
+
+/* Circle on timeline */
+.container::after {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  right: -10px;
+  top: 15px;
+  background-color: #707070;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+/* Fix right circle */
+.right::after {
+  left: -10px;
+}
+
+
+#logo {
+  margin: 0;
+}
+
+#about-me {
+  margin: var(--spacing-4);
+}
+
+#projects {
+  margin: var(--spacing-4);
+}
+
+
+#skills {
+  margin: var(--spacing-4);
+}
+
+#contact {
+  margin: var(--spacing-4);
+}
+
+#skills-container {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+#skills-container > * {
+  font-size: 2em;
+  width: 2em;
+  margin-top: var(--spacing-1);
+}
+
+@media only screen and (max-width: 600px) {
+  .about-me-container {
+    flex-direction: column;
+  }
+}
