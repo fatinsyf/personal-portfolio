@@ -56,7 +56,7 @@ nav {
   width: 100%;
   top: 0; /* Position the navbar at the top of the page */
   left: 0;
-  z-index: 2;
+  z-index: 100;
 }
 
 .navigation-items {
@@ -65,8 +65,8 @@ nav {
   padding: 0;
   align-items: center;
   margin: 0;
-  /* margin-left: auto; */
-  margin-left: 60%;
+  margin-left: auto;
+  
 }
 
 .navigation-item {
@@ -84,19 +84,22 @@ nav {
   margin-right: auto;
 }
 
-.about-me-container {
-  display: flex;
+.home-container {
+  /* display: flex; */
+  padding-top: 0;
+  position: relative;
+  left: 0;
 }
 
-.about-me-text-container {
+.home-text-container {
   margin-right: var(--spacing-3);
 }
 
-#about-me p {
+#home p {
   padding-top: 30px;
 }
 
-#about-me h2 {
+#home h2 {
   float: left;
   padding: 0 0px 0 535px;
 }
@@ -124,24 +127,23 @@ details {
 
 main {
   margin: 0 auto;
+  position: relative;
+  top: 30px;
 }
 
 footer {
   margin-top: auto;
   padding: var(--spacing-2) 0;
   margin: 0 auto;
+  position: relative;
+  top: 70px;
 }
 
-section {
-  padding: var(--spacing-3) 0;
-  padding-top: 60px;
-  width: 100%; /*before is 120 */
+.section {
+  padding-top: 4rem;
+
 }
 
-/* section h2 {
-  text-align: center;
-  background-color: purple;
-} */
 
 .icon {
   font-size: 2em;
@@ -239,21 +241,33 @@ a:hover {
   margin: 0;
 }
 
-#about-me {
-  margin: var(--spacing-4);
+#home { 
+  /* margin: var(--spacing-4); */
+  position: relative;
+  top: 45px;
+  /* background-color: coral; */
+  margin-left: -7%;
+  width: 108%;
 }
 
+#about {
+  /* padding-top: 120px; */
+  /* background-color: yellow; */
+  position: relative;
+  
+ }
+
 #projects {
-  margin: var(--spacing-4);
+  /* margin: var(--spacing-4); */
+  position: relative;
+  top: 70px;
 }
 
 
 #skills {
   margin: var(--spacing-4);
-}
-
-#contact {
-  margin: var(--spacing-4);
+  position: relative;
+  top: 70px;
 }
 
 #skills-container {
@@ -270,7 +284,59 @@ a:hover {
 }
 
 @media only screen and (max-width: 600px) {
-  .about-me-container {
+  .home-container {
     flex-direction: column;
   }
 }
+
+/* BANNER */
+
+.star {
+  width: 102%;
+  height: 500px;
+  position: relative;
+}
+
+.name-title {
+  position: absolute;
+  top: 50%;
+  margin: 0 auto;
+  width: 103vw;
+  transform: translateY(-50%);
+  /* left: 50%; */
+}
+
+ .name-title h1 {
+  font-weight: 800;
+  font-size: 2.2rem;
+  margin: 0 auto;
+  position: relative;
+  text-align: center;
+  display: table;
+  left: 2.5%;
+ }
+
+ .name-title h1:before {
+  border-bottom: 1px dashed #a7a7a7;
+  border-left: 1px dashed #a7a7a7;
+  height: 60px;
+  width: 40px;
+  left: -14%;
+ }
+
+ .name-title h1:after {
+  border-top: 1px dashed #a7a7a7; 
+  border-right: 1px dashed #a7a7a7;
+  height: 60px;
+  width: 40px;
+ }
+
+ .name-title h1:after, .name-title h1:before {
+  content: "";
+  position: absolute;
+  z-index: 1;
+ }
+
+ *, :after, :before {
+  box-sizing: border-box;
+ }
