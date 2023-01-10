@@ -50,7 +50,6 @@ nav {
   display: flex;
   align-items: center;
   padding: var(--spacing-3) 30px;
-  /* padding: 10px; */
   background-color: #050512; 
   position: fixed;
   width: 100%;
@@ -108,17 +107,40 @@ nav {
   display: inline;
 }
 
-.excursion {
+.project {
   display: flex;
+  justify-content: center; /* Center the image*/
 }
 
-.excursion figure {
+.project figure {
   text-align: center;
+  transition: transform .5s;
 }
 
-figure > img {
-  width: 400px;
-  height: 400px;
+.project figure:hover {
+  transform: scale(1.2);
+}
+
+.project figure:hover img {
+  opacity: 0.3;
+}
+
+.project figure .text {
+  background-color: #606060;
+  position: relative;
+  top: -50%;
+  visibility: hidden;
+}
+
+.project figure:hover .text {
+  visibility: visible;
+  width: 120px;
+  left: 35%;
+  border-radius: 8px;
+}
+
+.text {
+  color: #ffff;
 }
 
 details {
