@@ -305,12 +305,6 @@ a:hover {
   margin-top: var(--spacing-1);
 }
 
-@media only screen and (max-width: 600px) {
-  .home-container {
-    flex-direction: column;
-  }
-}
-
 /* BANNER */
 
 .star {
@@ -362,3 +356,9 @@ a:hover {
  *, :after, :before {
   box-sizing: border-box;
  }
+
+
+ @media only screen and (max-width: 600px) {
+ 
+
+}
